@@ -1,0 +1,695 @@
+/* Setting the Nav Bar Apart from Content */
+.main {
+    margin-left: 200px; /* Same as the width of the sidenav */
+    font-size: 28px; /* Increased text to enable scrolling */
+    padding: 0px 10px;
+  }
+  
+  /* Background */
+  body {
+    max-width: 100%;
+    overflow-x: hidden;
+    background-image: linear-gradient(
+      to left,
+      #005772,
+      #00687e,
+      #04748a,
+      #0b7c8e,
+      #2b95a2,
+      #49acb2,
+      #63c1c1
+  
+    );
+    --mask: radial-gradient(
+          11.18vw at 50% calc(100% - 15vw),
+          #000 99%,
+          #0000 101%
+        )
+        calc(50% - 10vw) 0/20vw 100%,
+      radial-gradient(11.18vw at 50% calc(100% + 10vw), #0000 99%, #000 101%) 50%
+        calc(100% - 5vw) / 20vw 100% repeat-x;
+    color: white;
+    font-family: "Lato", sans-serif;
+  
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    
+  }
+  
+  /* Star Animation in Nav Bar */
+  .star {
+    position: absolute;
+    top: -20px;
+    color: #fff;
+    animation: animate 5s linear forwards;
+    z-index: -1;
+  }
+  .star::before {
+    content: '\f186';
+    font-family: fontAwesome;
+    text-shadow: 0 0 5px #fff,
+    0 0 20px #fff,
+    0 0 50px #fff;
+  }
+  
+  @keyframes animate {
+    0%
+    {
+      transform: translateY(0) rotate(0deg);
+      opacity: 1;
+    }
+    80%
+    {
+      opacity: 1;
+    }
+    100%
+    {
+      transform: translateY(100vh) rotate(360deg);
+      opacity: 0;
+    }
+  }
+  
+  /* Side Navigation Bar */
+  .sidenav {
+    height: 100%;
+    width: 200px;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    background-color: #040c18;
+    overflow-x: hidden;
+    padding-top: 20px;
+  
+    overflow: hidden;
+  }
+  
+  .navlinks {
+    padding: 6px 8px 6px 16px;
+    text-decoration: none;
+    font-size: 25px;
+    color: #818181;
+    display: block;
+  }
+  
+  .sidenav a:hover {
+    color: #f1f1f1;
+  }
+  
+  .yt-home {
+    margin-top: auto;
+    margin-left: 20px;
+    font-size: 30px;
+    color: white;
+    text-decoration: none;
+    font-family:Georgia, 'Times New Roman', Times, serif;
+    text-shadow: 0 0 5px #000,
+    0 0 20px #000,
+    0 0 50px #000;
+  }
+  
+  hr {
+    height: 5px;
+    background-color: white;
+  }
+  
+  @media screen and (max-height: 450px) {
+    .sidenav {
+      padding-top: 15px;
+    }
+    .sidenav a {
+      font-size: 18px;
+    }
+  }
+  
+  ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+  }
+  
+  li {
+    display: inline;
+  }
+  
+  
+  /* About Me Beginning */
+  .start {
+    margin-top: -13%;
+  }
+  
+  .boutme-line {
+    margin-top: -7px;
+  }
+  
+  
+  /* General CSS For Text */
+  h1 {
+    text-align: center;
+    font-family: "Titan One", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 60px;
+  }
+  
+  h2 {
+    text-align: center;
+    font-size: 55px;
+    font-family: "Secular One", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+  }
+  
+  h3 {
+    font-family: "Mitr", sans-serif;
+    font-weight: 500;
+    font-style: normal;
+    font-size: 45px;
+    margin-bottom: -5px;
+  }
+  
+  p {
+    font-family: "Cabin", sans-serif;
+    font-size: 20px;
+  }
+  
+  
+  /* Ambitious Section */
+  .nextech-container {
+    margin: 100px auto;
+    width: 75%;
+    justify-content: center;
+  }
+
+  .nextechh3.container {
+    font-size: 45px;
+  }
+  
+  .nextechp.container {
+    font-size: 25px;
+  }
+  
+  .nextech-pic {
+    max-width: 500px;
+    float: right;
+    border-radius: 10px;
+    border: 10px solid white;
+    margin-left: 25px;
+  }
+
+  .tennis-container {
+    margin: 100px auto;
+    width: 75%;
+    justify-content: center;
+  }
+  
+  .tennis-pic {
+    max-width: 500px;
+    float: left;
+    border-radius: 10px;
+    border: 10px solid white;
+    margin-right: 25px;
+  }
+  
+  /* Creative Section */
+  .creative-container {
+    text-align: center;
+  }
+  
+  .hoco-hallway {
+    border: 5px solid white;
+  }
+  
+  .homecoming-hallway {
+    text-align: center;
+  }
+  
+  .yt-text {
+    text-align: center;
+  }
+  
+  .text h3 {
+    font-size: 50px;
+    text-align: center;
+    padding: 5px;
+    margin-bottom: -5px;
+  }
+  
+  .creativity-vid {
+    border: 5px solid white;
+    width: 470px;
+    height: 265px;
+    margin-left: -10px;
+  }
+  .creativity-vid2 {
+    border: 5px solid white;
+    width: 470px;
+    height: 265px;
+  }
+  
+  
+  /* Caring Section */
+  .caring-text {
+    max-width: 450px;
+    float: right;
+    border-radius: 10px;
+    border: 3px solid white;
+    margin-left: 30px;
+    text-align: center;
+  }
+  
+  .caring-container {
+    margin: 100px auto;
+    width: 75%;
+    justify-content: center;
+  }
+  
+  /* Academics Section */
+  .html-css-js {
+    width: 400px;
+    height: 200px;
+    border: 5px solid white;
+    margin-top: 10px;
+    margin-bottom: 10px;
+  }
+  
+  .pmhs-pic {
+    width: 400px;
+    height: 200px;
+    border: 5px solid white;
+  }
+  
+  /* Future Plans Section */
+  .option {
+    display: flex;
+    align-items: center;
+    margin: 10px 0;
+    border-radius: 10px;
+    overflow: hidden;
+    color: black;
+  }
+  
+  .option img {
+    width: 200px;
+    height: 200px;
+    border: 5px solid white;
+    margin-left: 10px;
+  }
+  
+  .option-text {
+    padding: 30px;
+    color: white;
+    margin-top: -50px;
+  }
+  
+  
+  
+  .column {
+    display: flex;
+    float: left;
+    width: 32%;
+    padding: 7px;
+  }
+  
+  .row::after {
+    content: "";
+    clear: both;
+    display: table;
+  }
+  
+  .row {
+    display: flex;
+    justify-content: space-between;
+  }
+  
+  .card-img-top {
+    width: 100%;
+    margin-left: 45px;
+    border: 5px solid white;
+    width: 500px;
+  }
+  
+  .card-img-pfp {
+    width: 100%;
+    border-radius: 100%;
+    border: 5px solid white;
+    width: 200px;
+    display: flex;
+    justify-content: center;
+  }
+  
+  .card-img-thanks {
+    width: 100%;
+    margin-left: 45px;
+    border: 5px solid white;
+    width: 400px;
+  }
+  
+  .comment-down-below {
+    text-align: center;
+    text-decoration: none;
+    color: white;
+    display: flex;
+    justify-content: center;
+    font-family: "Cabin", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+  }
+  
+  .card-date {
+    font-size: 18px;
+    margin-top: 15px;
+    margin-left: 45px;
+    text-align: center;
+  }
+  
+  .card-title {
+    font-size: 30px;
+    margin-top: 15px;
+    margin-left: 45px;
+    text-align: center;
+    font-family: "Ubuntu Mono", monospace;
+    font-weight: 700;
+    font-style: bold;
+  }
+  
+  .card-text {
+    font-size: 20px;
+    margin-top: -30px;
+    margin-left: 45px;
+    text-align: center;
+  }
+  
+  .ytvid-traits {
+    display: flex;
+    justify-content: space-evenly;
+  }
+  
+  /* Slides */
+  .slidescontainer {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: 20px; /* space between slideshow and text container */
+  }
+  
+  .slideshow-container {
+    position: relative;
+    margin-left: -100px;
+    max-width: 500px;
+    background-color: white;
+    padding: 8px;
+    border-radius: 10px;
+  }
+  
+  .mySlides {
+    display: none;
+  }
+  
+  .mySlides img {
+    width: 100%;
+    border-radius: 10px;
+  }
+  
+  .prev, .next {
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    width: auto;
+    padding: 16px;
+    margin-top: -22px;
+    color: white;
+    font-weight: bold;
+    font-size: 18px;
+    transition: 0.6s ease;
+    user-select: none;
+    background-color: rgba(0, 0, 0, 0.6); /* Adjust background color for better visibility */
+  }
+  
+  .prev {
+    left: 20px;
+    border-radius: 3px 0 0 3px;
+  }
+  
+  .next {
+    right: 20px;
+    border-radius: 3px 0 0 3px;
+  }
+  
+  .prev:hover, .next:hover {
+    background-color: rgba(0, 0, 0, 0.8);
+  }
+  
+  .text-container {
+    max-width: 300px;
+    padding: 20px;
+    border-radius: 10px;
+    color: white;
+  }
+  
+  .text-container h3 {
+    text-align: center;
+    margin-right: -120px;
+    margin-top: -45px;
+  }
+  
+  .text-container p {
+    font-size: 20px;
+    text-align: center;
+    margin-right: -120px;
+  }
+  
+  /* Academics Section */
+  .academics-container {
+    display: flex;
+    padding: 40px;
+    border-radius: 10px;
+  }
+  
+  .section {
+    padding: 50px;
+    color: white;
+    flex: 1;
+    text-align: center;
+    position: relative;
+  }
+  
+  .vertical-line {
+    width: 5px;
+    background-color: white;
+    align-self: stretch;
+    margin: 0 20px;
+  }
+  
+  .dropdown {
+    margin-top: 40px;
+    position: relative;
+  }
+  
+  button {
+    background-color: black;
+    font-family: "Cabin", sans-serif;
+    
+  }
+  
+  .dropdown button {
+    color: white;
+    padding: 10px;
+    border: none;
+    cursor: pointer;
+    font-size: 30px;
+  }
+  
+  .dropdown-content {
+    display: none;
+    background-color: white;
+    color: black;
+    padding: 10px;
+    border-radius: 5px;
+    margin-top: 5px;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    width: auto;
+    z-index: 1;
+  }
+  
+  /* Dance Section */
+  .dance-body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0;
+  }
+  
+  .youtube-container {
+    perspective: 1000px;
+  }
+  
+  .youtube-card {
+    width: 560px;
+    height: 315px;
+    position: relative;
+    transform-style: preserve-3d;
+    transition: transform 0.6s;
+  }
+  
+  .youtube-card-inner {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    transform-style: preserve-3d;
+    transition: transform 0.6s;
+  }
+  
+  .youtube-card:hover .youtube-card-inner {
+    transform: rotateY(180deg);
+  }
+  
+  .youtube-card-front, .youtube-card-back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+    border: 5px solid white;
+  }
+  
+  .youtube-card-back {
+    transform: rotateY(180deg);
+  }
+  
+  .youtube-card iframe {
+    width: 100%;
+    height: 100%;
+  }
+  
+  
+  
+  body {
+      font-family: Arial, sans-serif;
+      background-color: #fff;
+      text-align: center;
+      margin: 0;
+      padding: 20px;
+  }
+  
+  h1 {
+      margin-bottom: 20px;
+  }
+  
+  .image-row {
+      display: flex;
+      justify-content: center;
+      gap: 20px;
+  }
+  
+  .image-container {
+      position: relative;
+      width: 250px;
+      height: 200px;
+      text-align: center;
+  }
+  
+  .image-container img,
+  .image-container iframe {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      border-radius: 10px;
+      transition: opacity 0.3s ease;
+  }
+  
+  .image-container iframe {
+      opacity: 0;
+      pointer-events: none;
+  }
+  
+  .image-container:hover img {
+      opacity: 0;
+  }
+  
+  .image-container:hover iframe {
+      opacity: 1;
+      pointer-events: all;
+  }
+  
+  .image-container h3,
+  .image-container p {
+      position: relative;
+      top: 210px;
+      margin: 0;
+      padding: 0;
+  }
+  
+  .image-container h3 {
+      font-size: 18px;
+      margin-bottom: 5px;
+  }
+  
+  .image-container p {
+      font-size: 14px;
+      color: #666;
+  }
+  
+  /* Scroller */
+  .scroll-indicator {
+    position: fixed;
+    bottom: 0;
+    left: 200px;
+    width: 86%;
+    height: 15px;
+    background-color: #ccc;
+  }
+  
+  .indicator {
+    width: 0;
+    height: 100%;
+    background-color: red;
+    transition: width 0.3s ease;
+  }
+
+/* Slide-in animations */
+.slide-in-left {
+    transform: translateX(-100%);
+    opacity: 0;
+    transition: transform 1s ease-out, opacity 1s ease-out;
+}
+
+.slide-in-right {
+    transform: translateX(100%);
+    opacity: 0;
+    transition: transform 1s ease-out, opacity 1s ease-out;
+}
+
+.slide-in-left.active {
+    transform: translateX(0);
+    opacity: 1;
+}
+
+.slide-in-right.active {
+    transform: translateX(0);
+    opacity: 1;
+}
+
+/* Specific styling for Google Slideshow iframe */
+.creative-container iframe {
+    max-width: 100%;
+    border: none;
+}
+
+/* Ensure other elements in the creative-container do not get affected by slide-in */
+.creative-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.creative-container .homecoming-hallway {
+    max-width: 100%;
+    margin-top: 20px;
+}

@@ -1,57 +1,363 @@
-.pfp {
-    border-radius: 100px;
-    margin-top: 10px;
+html {
+  position: fixed;
 }
 
+/* Background */
 body {
-    font-family: "Lato", sans-serif;
-  }
-  
-  .sidenav {
-    height: 100%;
-    width: 160px;
-    position: fixed;
-    z-index: 1;
-    top: 0;
-    left: 0;
-    background-color: #111;
-    overflow-x: hidden;
-    padding-top: 20px;
-  }
-  
-  .sidenav a {
-    padding: 6px 8px 6px 16px;
-    text-decoration: none;
-    font-size: 25px;
-    color: #818181;
-    display: block;
-  }
-  
-  .sidenav a:hover {
-    color: #f1f1f1;
-  }
-  
-.banner {
-  display: block;
-  margin-left: -19px;
-  margin-right: auto;
-  width: 103%;
+  background-image: linear-gradient(
+    to right,
+    #001d37,
+    #002746,
+    #013155,
+    #003a62,
+    #01426c
+  );
+  --mask: radial-gradient(
+        11.18vw at 50% calc(100% - 15vw),
+        #000 99%,
+        #0000 101%
+      )
+      calc(50% - 10vw) 0/20vw 100%,
+    radial-gradient(11.18vw at 50% calc(100% + 10vw), #0000 99%, #000 101%) 50%
+      calc(100% - 5vw) / 20vw 100% repeat-x;
+  color: white;
+  font-family: "Lato", sans-serif;
 }
 
-  .main {
-    margin-left: 160px; /* Same as the width of the sidenav */
-    font-size: 28px; /* Increased text to enable scrolling */
-    padding: 0px 10px;
+body.fade-in {
+  opacity: 0;
+  animation: fadeIn 2s forwards;
+}
+
+@keyframes fadeIn {
+  to {
+      opacity: 1;
   }
-  
-  @media screen and (max-height: 450px) {
-    .sidenav {padding-top: 15px;}
-    .sidenav a {font-size: 18px;}
+}
+
+
+.main {
+  margin-left: 200px; /* Same as the width of the sidenav */
+  font-size: 28px; /* Increased text to enable scrolling */
+  padding: 0px 10px;
+}
+
+/* Navigation Side Bar */
+.star {
+  position: absolute;
+  top: -20px;
+  color: #fff;
+  animation: animate 5s linear forwards;
+  z-index: -1;
+}
+.star::before {
+  content: '\f005';
+  font-family: fontAwesome;
+  text-shadow: 0 0 5px #fff,
+  0 0 20px #fff,
+  0 0 50px #fff;
+}
+
+@keyframes animate {
+  0%
+  {
+    transform: translateY(0) rotate(0deg);
+    opacity: 1;
+  }
+  80%
+  {
+    opacity: 1;
+  }
+  100%
+  {
+    transform: translateY(100vh) rotate(360deg);
+    opacity: 0;
+  }
+}
+
+.sidenav {
+  height: 100%;
+  width: 200px;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  background-color: #040c18;
+  overflow-x: hidden;
+  padding-top: 20px;
+
+  overflow: hidden;
+}
+
+.navlinks {
+  padding: 6px 8px 6px 16px;
+  text-decoration: none;
+  font-size: 25px;
+  color: #818181;
+  display: block;
+}
+
+.powerbutton {
+  text-decoration: none;
+  font-size: 50px;
+  margin-left: -55px;
+  text-align: center;
+  color: #818181;
+  display: block;
+}
+
+.sidenav a:hover {
+  color: #f1f1f1;
+}
+
+.yt-home {
+  margin-top: auto;
+  margin-left: 20px;
+  font-size: 30px;
+  color: white;
+  text-decoration: none;
+  font-family:Georgia, 'Times New Roman', Times, serif;
+  text-shadow: 0 0 5px #000,
+  0 0 20px #000,
+  0 0 50px #000;
+}
+
+.pfp {
+  border-radius: 50%;
+  border: 5px solid white;
+  margin-top: -50px;
+  width: 250px;
+  height: 250px;
+}
+
+hr {
+  height: 5px;
+  background-color: white;
+  margin-top: 10px;
+  margin-bottom: 20px;
+}
+
+@media screen and (max-height: 450px) {
+  .sidenav {
+    padding-top: 15px;
+  }
+  .sidenav a {
+    font-size: 18px;
+  }
+}
+
+.pfp-bio {
+  display: flex;
+}
+
+.column {
+  float: left;
+  width: 32%;
+  padding: 7px;
+}
+
+.row::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+
+.row {
+  display: flex;
+  justify-content: space-between;
+}
+
+.card-img-top {
+  width: 390px;
+}
+
+.card-text {
+  font-size: 15px;
+  margin-top: 8px;
+}
+
+.card-title {
+  font-size: 20px;
+  margin-top: 5px;
+}
+
+h1 {
+  margin-left: 30px;
+  font-size: 50px;
+  margin-top: -50px;
+  font-family: "Secular One", sans-serif;
+}
+
+.statistics {
+  color: gray;
+  font-size: 15px;
+  margin-left: 30px;
+  margin-top: 20px;
+  font-family: "Ubuntu Mono", monospace;
+}
+
+.bio {
+  font-size: 25px;
+  margin-left: 30px;
+  margin-top: 25px;
+  font-family: "Cabin", sans-serif;
+}
+
+ul {
+  list-style-type: none;
+  margin: 0;
+  margin-top: 20px;
+  padding: 0;
+}
+
+li {
+  display: inline;
+}
+
+/* Navigation Bar */
+.recommended-nav {
+  text-decoration: underline;
+  color: white;
+  padding: 8px;
+}
+
+.recommended-nav:hover {
+  text-decoration: underline;
+  font-size: 1.8rem;
+}
+
+.socials-nav {
+
+  text-decoration: none;
+  color: white;
+  padding: 8px;
+}
+
+.socials-nav:hover {
+  text-decoration: lightgray underline;
+  color: lightgray;
+  font-size: 1.8rem;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+
+/* Welcome Banner */
+#banner {
+  width: 100%; 
+  text-align: center;
+  margin-top: 90px;
+  margin-bottom: 20px;
+  font-size: 5px;
+  position: relative; 
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+span {
+  font-size: calc(1em + 7vw); 
+  padding: 0 calc(0.5rem + 0.5vw);
+  position: relative; 
+  opacity: 0; 
+}
+
+span:not(#dot) {
+  bottom: -200px;
+  animation-name: appear; 
+  animation-duration: 2s;
+  animation-timing-function: ease-out;
+  animation-fill-mode: forwards;
+  font-family: fontAwesome;
+  color: white;
+}
+
+span:nth-of-type(2) {
+  animation-delay: 0.2s;
+}
+
+span:nth-of-type(3) {
+  animation-delay: 0.4s;
+}
+
+span:nth-of-type(4) {
+  animation-delay: 0.6s;
+}
+
+span:nth-of-type(5) {
+  animation-delay: 0.8s;
+}
+
+span:nth-of-type(6) {
+  animation-delay: 1s;
+}
+
+span:nth-of-type(7) {
+  animation-delay: 1.2s;
+}
+
+#dot {
+  bottom: 100px;
+  animation-name: dot; 
+  animation-duration: 1s;
+  animation-timing-function: ease-in;
+  animation-fill-mode: forwards; 
+  animation-delay: 2.3s; 
+}
+
+@keyframes appear {
+  0% {
+      opacity: 0; 
+      top: -200px;
   }
 
-  .pfp-bio {
-    display: flex;
-
+  70% {
+      opacity: 1; 
+      top: 15px;
   }
 
-  
+  85% {
+      opacity: 1;
+      top: -10px;
+  }
+
+  100% {
+      opacity: 1; 
+      top: 0;
+  }
+}
+
+@keyframes dot {
+  0% {
+      opacity: 0; 
+      top: 100px;
+  }
+
+  50% {
+      opacity: 1; 
+      top: 0;
+  }
+
+  65% {
+      opacity: 1; 
+      top: 15px;
+  }
+
+  75% {
+      opacity: 1; 
+      top: 0;
+  }
+
+  90% {
+      opacity: 1; 
+      top: 10px;
+  }
+
+  100% {
+      opacity: 1; 
+      top: 0;
+  }
+}

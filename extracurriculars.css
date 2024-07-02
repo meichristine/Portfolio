@@ -1,0 +1,417 @@
+/* Transitioning of Screen */
+.fade-in, .slide-in {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 1.5s ease-out, transform 1.5s ease-out;
+}
+
+.fade-in.visible, .slide-in.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Background */
+body {
+  background-image: linear-gradient(
+    to left,  
+    #813d79,
+    #632b6c,
+    #612b6d,
+    #54255c,
+    #3d1a51,   
+    #280f36
+  );
+  --mask: radial-gradient(
+        11.18vw at 50% calc(100% - 15vw),
+        #000 99%,
+        #0000 101%
+      )
+      calc(50% - 10vw) 0/20vw 100%,
+    radial-gradient(11.18vw at 50% calc(100% + 10vw), #0000 99%, #000 101%) 50%
+      calc(100% - 5vw) / 20vw 100% repeat-x;
+  color: white;
+  font-family: "Lato", sans-serif;
+}
+
+/* Star Animation in Nav Bar */
+.star {
+  position: absolute;
+  top: -20px;
+  color: #fff;
+  animation: animate 5s linear forwards;
+  z-index: -1;
+}
+.star::before {
+  content: '\f005';
+  font-family: fontAwesome;
+  text-shadow: 0 0 5px #fff,
+  0 0 20px #fff,
+  0 0 50px #fff;
+}
+
+@keyframes animate {
+  0%
+  {
+    transform: translateY(0) rotate(0deg);
+    opacity: 1;
+  }
+  80%
+  {
+    opacity: 1;
+  }
+  100%
+  {
+    transform: translateY(100vh) rotate(360deg);
+    opacity: 0;
+  }
+}
+
+/* Side Navigation Bar */
+.sidenav {
+  height: 100%;
+  width: 200px;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  background-color: #040c18;
+  overflow-x: hidden;
+  padding-top: 20px;
+
+  overflow: hidden;
+}
+
+.navlinks {
+  padding: 6px 8px 6px 16px;
+  text-decoration: none;
+  font-size: 25px;
+  color: #818181;
+  display: block;
+}
+
+.sidenav a:hover {
+  color: #f1f1f1;
+}
+
+.yt-home {
+  margin-top: auto;
+  margin-left: 20px;
+  font-size: 30px;
+  color: white;
+  text-decoration: none;
+  font-family:Georgia, 'Times New Roman', Times, serif;
+  text-shadow: 0 0 5px #000,
+  0 0 20px #000,
+  0 0 50px #000;
+}
+
+hr {
+  height: 5px;
+  background-color: white;
+}
+
+@media screen and (max-height: 450px) {
+  .sidenav {
+    padding-top: 15px;
+  }
+  .sidenav a {
+    font-size: 18px;
+  }
+}
+
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+li {
+  display: inline;
+}
+
+/* Setting the Nav Bar Apart from Content */
+.main {
+margin-left: 200px; /* Same as the width of the sidenav */
+font-size: 28px; /* Increased text to enable scrolling */
+}
+
+/* General CSS For Text */
+h1 {
+text-align: center;
+font-family: "Titan One", sans-serif;
+font-weight: 400;
+font-style: normal;
+font-size: 60px;
+}
+
+h3 {
+font-family: "Mitr", sans-serif;
+font-weight: 500;
+font-style: normal;
+font-size: 50px;
+margin-bottom: -5px;
+}
+
+p {
+font-family: "Cabin", sans-serif;
+font-size: 25px;
+}
+
+/* My Extracurriculars Beginning */
+.start {
+margin-top: -12%;
+margin-left: -3%;
+}
+
+.curriculars-line {
+margin-top: -7px;
+width: 100%;
+}
+
+/* Positions Section */
+.positions-imgs {
+margin: 0;
+padding: 0;
+height: 100%;
+display: flex;
+float: right;
+}
+
+.caption-text {
+margin-left: -100px;
+}
+
+.image-container {
+position: relative;
+max-width: 450px;
+float: left;
+border-radius: 10px;
+border: 3px solid white;
+margin-left: 30px;
+text-align: center;
+overflow: hidden;
+}
+
+.image-container2 {
+position: relative;
+max-width: 450px;
+float: left;
+border-radius: 10px;
+border: 3px solid white;
+margin-right: 30px;
+text-align: center;
+overflow: hidden;
+}
+
+.image-container img {
+width: 100%;
+height: 100%;
+display: block;
+transition: opacity 0.5s ease-in-out;
+}
+
+.hover-image {
+position: absolute;
+top: 0;
+left: 0;
+opacity: 0;
+}
+
+.image-container:hover .hover-image {
+opacity: 1;
+}
+
+.image-container:hover .base-image {
+opacity: 0;
+}
+
+.positions-img {
+max-width: 450x;
+float: right;
+border-radius: 10px;
+border: 3px solid white;
+margin-left: 30px;
+text-align: center;
+}
+
+.positions-container {
+margin: 100px auto;
+width: 75%;
+justify-content: center;
+}
+
+.positions-middle-img {
+max-width: 450px;
+margin-left: -135px;
+float: left;
+border-radius: 10px;
+border: 3px solid white;
+margin-right: 30px;
+text-align: center;
+}
+
+.positions-middle-container {
+margin: 100px auto;
+width: 75%;
+justify-content: center;
+margin-right: 100px;
+}
+
+body {
+  background-color: #fff;
+  text-align: center;
+  margin: 0;
+}
+
+/* Member Cards Section */
+.member-container {
+display: flex;
+flex-wrap: wrap;
+justify-content: center;
+gap: 300px;
+margin: 50px;
+margin-top: 50px;
+}
+
+.member2-container {
+display: flex;
+flex-wrap: wrap;
+justify-content: center;
+gap: 50px;
+margin: 50px;
+margin-top: 150px;
+}
+
+.card {
+width: 350px;
+height: 350px;
+perspective: 1000px;
+}
+
+.card-inner {
+position: relative;
+width: 100%;
+height: 100%;
+transition: transform 0.6s;
+transform-style: preserve-3d;
+}
+
+.card:hover .card-inner {
+transform: rotateX(180deg);
+}
+
+.card-front, .card-back {
+position: absolute;
+width: 100%;
+height: 100%;
+backface-visibility: hidden;
+}
+
+.card-front img {
+width: 100%;
+height: 100%;
+object-fit: cover;
+border: 5px solid white;
+}
+.card-back {
+display: flex;
+align-items: center;
+justify-content: center;
+background-color: #813d79;
+color: white;
+transform: rotateX(180deg);
+padding: 10px;
+border: 5px solid white;
+}
+
+/* Thanks for Watching Section */
+.row {
+display: flex;
+justify-content: space-between;
+}
+
+.card-title {
+font-size: 30px;
+margin-top: 15px;
+margin-left: 127px;
+text-align: center;
+font-family: "Ubuntu Mono", monospace;
+font-weight: 700;
+font-style: bold;
+}
+
+.card-text {
+font-size: 20px;
+margin-top: -30px;
+margin-left: 127px;
+text-align: center;
+}
+
+.comment-down-below {
+text-align: center;
+text-decoration: none;
+color: white;
+display: flex;
+justify-content: center;
+font-family: "Cabin", sans-serif;
+font-weight: 400;
+font-style: normal;
+}
+
+.card-img-pfp {
+width: 100%;
+border-radius: 100%;
+border: 5px solid white;
+width: 200px;
+display: flex;
+justify-content: center;
+margin-left: 70px;
+}
+
+.card-img-thanks {
+width: 100%;
+margin-left: 45px;
+border: 5px solid white;
+width: 400px;
+}
+
+.card-title-2 {
+font-size: 30px;
+margin-top: 15px;
+margin-left: -127px;
+text-align: center;
+font-family: "Ubuntu Mono", monospace;
+font-weight: 700;
+font-style: bold;
+}
+
+.card-text-2 {
+font-size: 20px;
+margin-top: -30px;
+margin-left: -127px;
+text-align: center;
+}
+
+.card-img-thanks-2 {
+width: 100%;
+margin-left: -127px;
+border: 5px solid white;
+width: 400px;
+}
+
+/* Scroller */
+.scroll-indicator {
+position: fixed;
+bottom: 0;
+left: 200px;
+width: 86%;
+height: 15px;
+background-color: #ccc;
+}
+
+.indicator {
+width: 0;
+height: 100%;
+background-color: red;
+transition: width 0.3s ease;
+}
