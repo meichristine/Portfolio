@@ -1,5 +1,10 @@
+/* Locked Screen */
 html {
   position: fixed;
+}
+
+.recommended-nav, .socials-nav {
+  font-family: "Cabin", sans-serif;
 }
 
 /* Background */
@@ -97,15 +102,6 @@ body.fade-in {
   display: block;
 }
 
-.powerbutton {
-  text-decoration: none;
-  font-size: 50px;
-  margin-left: -55px;
-  text-align: center;
-  color: #818181;
-  display: block;
-}
-
 .sidenav a:hover {
   color: #f1f1f1;
 }
@@ -146,10 +142,12 @@ hr {
   }
 }
 
+/* Description of Channel */
 .pfp-bio {
   display: flex;
 }
 
+/* Thumbnails */
 .column {
   float: left;
   width: 32%;
@@ -169,11 +167,13 @@ hr {
 
 .card-img-top {
   width: 390px;
+  border: 5px solid white;
 }
 
 .card-text {
   font-size: 15px;
   margin-top: 8px;
+  font-family: "Cabin", sans-serif;
 }
 
 .card-title {
@@ -181,6 +181,7 @@ hr {
   margin-top: 5px;
 }
 
+/* Words with Self-Description */
 h1 {
   margin-left: 30px;
   font-size: 50px;

@@ -36,6 +36,7 @@ function toggleDropdown(id) {
   }
 }
 
+/* Lock Horizontal Scroll */
 var scrollEventhandler = function ()
 {
     window.scroll(0, window.pageYOffset)

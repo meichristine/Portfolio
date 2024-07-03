@@ -33,3 +33,15 @@ function showTime() {
   document.getElementById("clock").innerHTML = currentTime;
 }
 showTime();
+
+/* Notification Animation */
+document.addEventListener("DOMContentLoaded", function() {
+  setTimeout(function() {
+    document.getElementById('animated-button').style.bottom = 'calc(50vh - 25px)'; // Slide up to middle of screen
+    document.getElementById('animated-button').style.opacity = '1'; // Fade in
+  }, 2000); // 2000 milliseconds = 2 seconds
+
+  document.getElementById('animated-button').addEventListener('click', function() {
+    window.location.href = 'yt-transition.html'; // Replace with the URL of the other HTML page
+  });
+});

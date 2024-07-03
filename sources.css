@@ -1,0 +1,80 @@
+/* Background */
+body {
+  max-width: 100%;
+  overflow-x: hidden;
+  background-image: linear-gradient(
+    to left,
+    #005772,
+    #00687e,
+    #04748a,
+    #0b7c8e,
+    #2b95a2,
+    #49acb2,
+    #63c1c1
+
+  );
+  --mask: radial-gradient(
+        11.18vw at 50% calc(100% - 15vw),
+        #000 99%,
+        #0000 101%
+      )
+      calc(50% - 10vw) 0/20vw 100%,
+    radial-gradient(11.18vw at 50% calc(100% + 10vw), #0000 99%, #000 101%) 50%
+      calc(100% - 5vw) / 20vw 100% repeat-x;
+  color: white;
+  font-family: "Lato", sans-serif;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+}
+
+/* Fade In Page */
+body.fade-in {
+    opacity: 0;
+    animation: fadeIn 2s forwards;
+  }
+  
+  @keyframes fadeIn {
+    to {
+        opacity: 1;
+    }
+  }
+
+  .yt-home {
+    margin-top: auto;
+    margin-left: 20px;
+    font-size: 30px;
+    color: white;
+    text-decoration: none;
+    font-family:Georgia, 'Times New Roman', Times, serif;
+    text-shadow: 0 0 5px #000,
+    0 0 20px #000,
+    0 0 50px #000;
+  }
+
+  /* General CSS For Text */
+h1 {
+  text-align: center;
+  font-family: "Titan One", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 60px;
+  margin-left: 200px;
+  }
+  
+  h3 {
+  font-family: "Mitr", sans-serif;
+  font-weight: 500;
+  font-style: normal;
+  font-size: 50px;
+  margin-bottom: -5px;
+  }
+  
+  p {
+  margin-left: 200px;
+  font-family: "Cabin", sans-serif;
+  font-size: 25px;
+  text-align: center;
+  }

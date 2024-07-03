@@ -67,7 +67,7 @@ section {
   }
 }
 
-span {
+.stars {
   position: absolute;
   width: 4px;
   height: 4px;
@@ -78,7 +78,7 @@ span {
   animation: animate 3s linear infinite;
 }
 
-span::before {
+.stars::before {
   content: "";
   position: absolute;
   top: 50%;
@@ -101,7 +101,7 @@ span::before {
   }
 }
 
-span:nth-child(1) {
+.stars:nth-child(1) {
   top: 0px;
   right: 0px;
   left: initial;
@@ -109,7 +109,7 @@ span:nth-child(1) {
   animation-duration: 1s;
 }
 
-span:nth-child(2) {
+.stars:nth-child(2) {
   top: 0px;
   right: 80px;
   left: initial;
@@ -117,7 +117,7 @@ span:nth-child(2) {
   animation-duration: 3s;
 }
 
-span:nth-child(3) {
+.stars:nth-child(3) {
   top: 80px;
   right: 0px;
   left: initial;
@@ -125,7 +125,7 @@ span:nth-child(3) {
   animation-duration: 2s;
 }
 
-span:nth-child(4) {
+.stars:nth-child(4) {
   top: 0px;
   right: 180px;
   left: initial;
@@ -133,7 +133,7 @@ span:nth-child(4) {
   animation-duration: 1.5s;
 }
 
-span:nth-child(5) {
+.stars:nth-child(5) {
   top: 0px;
   right: 400px;
   left: initial;
@@ -141,7 +141,7 @@ span:nth-child(5) {
   animation-duration: 2.5s;
 }
 
-span:nth-child(6) {
+.stars:nth-child(6) {
   top: 0px;
   right: 600px;
   left: initial;
@@ -149,13 +149,14 @@ span:nth-child(6) {
   animation-duration: 3s;
 }
 
-span:nth-child(7) {
+.stars:nth-child(7) {
   top: 0px;
   right: 1000px;
   left: initial;
   animation-delay: 0.75s;
   animation-duration: 3s;
 }
+
 .netflix-intro {
   display: flex;
   gap: 20px;
@@ -203,10 +204,54 @@ span:nth-child(7) {
   }
 }
 
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
 
+#animated-button {
+  display: flex;
+  align-items: center;
+  background-color: rgb(244, 244, 244);
+  border: none;
+  color: lightskyblue;
+  border: 5px solid white;
+  font-family: "Mitr", sans-serif;
+  width: 600px;
+  height: 100px;
+  font-size: 35px;
+  cursor: pointer;
+  outline: none;
+  position: absolute;
+  bottom: -50px; /* Initially off screen */
+  opacity: 0; /* Initially hidden */
+  transition: bottom 0.5s ease-in-out, opacity 0.5s ease-in-out, box-shadow 0.3s ease-in-out;
+}
 
-button {
-  position: fixed;
-  height: 15vh;
-  width: 35vw;
+#animated-button img {
+  width: 90px; /* Adjust size of the small image */
+}
+
+#animated-button:hover {
+  box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.5);
+}
+
+.button-text {
+  flex: 1;
+  text-align: center;
+}
+
+#animated-button:hover .button-text {
+  display: none; /* Hide original text on hover */
+}
+
+#animated-button:hover::after {
+  content: "Christine Huynh Posted 3 New Videos!"; /* Text to appear on hover */
+  display: block;
+  text-align: center;
+  color: lightskyblue;
+  font-size: 30px;
+  margin-left: 10px;
 }

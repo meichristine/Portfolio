@@ -18,6 +18,33 @@ document.addEventListener('DOMContentLoaded', () => {
     handleScroll();
 });
 
+/* Fade Transition */
+document.addEventListener("DOMContentLoaded", function() {
+    const faders = document.querySelectorAll('.fade-in-on-scroll');
+    
+    const appearOptions = {
+      threshold: 0,
+      rootMargin: "0px 0px -50px 0px"
+    };
+    
+    const appearOnScroll = new IntersectionObserver(function(entries, appearOnScroll) {
+      entries.forEach(entry => {
+        if (!entry.isIntersecting) {
+          return;
+        } else {
+          entry.target.classList.add('fade-in-visible');
+          appearOnScroll.unobserve(entry.target);
+        }
+      });
+    }, appearOptions);
+    
+    faders.forEach(fader => {
+      appearOnScroll.observe(fader);
+    });
+  });
+  
+
+/* Scroll Indicator */
 window.onscroll = function() {scrollIndicator()};
 
 function scrollIndicator() {
@@ -28,3 +55,10 @@ function scrollIndicator() {
   document.getElementById("scrollIndicator").style.opacity = "1";
   document.getElementById("scrollIndicator").querySelector(".indicator").style.width = scrolled + "%";
 }
+
+/* Lock Horiztonal Scroll */
+var scrollEventhandler = function ()
+{
+    window.scroll(0, window.pageYOffset)
+}
+window.addEventListener("scroll", scrollEventhandler, false);

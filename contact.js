@@ -18,3 +18,10 @@ function stars() {
   setInterval(() => {
     stars();
   }, 100);
+
+  /* Lock Vertical Scroll */
+var scrollEventhandler = function ()
+{
+    window.scroll(0, window.pageXOffset)
+}
+window.addEventListener("scroll", scrollEventhandler, false);

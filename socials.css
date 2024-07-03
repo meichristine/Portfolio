@@ -1,3 +1,13 @@
+/* Locked Screen */
+html {
+  position: fixed;
+}
+
+.recommended-nav, .socials-nav {
+  font-family: "Cabin", sans-serif;
+}
+
+/* Background */
 body {
     background-image: linear-gradient(
       to right,
@@ -18,6 +28,17 @@ body {
         calc(100% - 5vw) / 20vw 100% repeat-x;
     color: white;
     font-family: "Lato", sans-serif;
+  }
+
+  body.fade-in {
+    opacity: 0;
+    animation: fadeIn 2s forwards;
+  }
+
+  @keyframes fadeIn {
+    to {
+        opacity: 1;
+    }
   }
   
   .main {
@@ -58,6 +79,17 @@ body {
     }
   }
   
+
+  /* Side Navigation Bar */
+  .powerbutton {
+    text-decoration: none;
+    font-size: 50px;
+    margin-left: -55px;
+    text-align: center;
+    color: #818181;
+    display: block;
+  }
+
   .sidenav {
     height: 100%;
     width: 200px;
@@ -93,22 +125,6 @@ body {
     text-shadow: 0 0 5px #000,
     0 0 20px #000,
     0 0 50px #000;
-  }
-  
-  .banner {
-    display: block;
-    text-align: center;
-    background-color: black;
-    margin: 0;
-    width: 100%;
-  }
-  
-  .pfp {
-    border-radius: 50%;
-    border: 5px solid black;
-    margin-top: 10px;
-    width: 45%;
-    height: 45%;
   }
   
   hr {
@@ -149,7 +165,7 @@ body {
   .card-img-top {
     width: 100px;
     margin-left: 85px;
-    margin-top: 75px;
+    margin-top: 50px;
   }
   
   .card-text {
@@ -164,11 +180,8 @@ body {
     text-align: center;
   }
   
-  h1 {
-    margin-left: 30px;
-    font-size: 50px;
-  }
 
+  /* Channel Introduction */
   .ttm {
     margin-top: 50px;
     font-size: 30px;
@@ -176,22 +189,40 @@ body {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   }
   
+  h1 {
+    margin-left: 30px;
+    font-size: 50px;
+    margin-top: -50px;
+    font-family: "Secular One", sans-serif;
+  }
+  
+  .pfp {
+    border-radius: 50%;
+    border: 5px solid white;
+    margin-top: -50px;
+    width: 250px;
+    height: 250px;
+  }
+
   .statistics {
     color: gray;
     font-size: 15px;
     margin-left: 30px;
-    margin-top: -30px;
+    margin-top: 20px;
+    font-family: "Ubuntu Mono", monospace;
   }
   
   .bio {
     font-size: 25px;
     margin-left: 30px;
-    margin-top: 15px;
+    margin-top: 25px;
+    font-family: "Cabin", sans-serif;
   }
   
   ul {
     list-style-type: none;
     margin: 0;
+    margin-top: 20px;
     padding: 0;
   }
   
@@ -199,6 +230,8 @@ body {
     display: inline;
   }
   
+
+  /* Navigation Bar */
   .recommended-nav {
     text-decoration: none;
     color: white;
@@ -337,3 +370,4 @@ span:nth-of-type(7) {
       top: 0;
   }
 }
+

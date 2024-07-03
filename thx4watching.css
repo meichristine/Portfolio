@@ -1,0 +1,72 @@
+/* Thanks for Watching Section */
+.row {
+    display: flex;
+    justify-content: space-between;
+    }
+    
+    .card-title {
+    font-size: 30px;
+    margin-top: 15px;
+    text-align: center;
+    font-family: "Ubuntu Mono", monospace;
+    font-weight: 700;
+    font-style: bold;
+    }
+    
+    .card-text {
+    font-size: 20px;
+    margin-top: -30px;
+    text-align: center;
+    }
+    
+    .comment-down-below {
+    text-align: center;
+    text-decoration: none;
+    color: white;
+    display: flex;
+    justify-content: center;
+    font-family: "Cabin", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    margin-top: 15px;
+    }
+    
+    .card-img-pfp {
+    width: 100%;
+    border-radius: 100%;
+    border: 5px solid white;
+    width: 200px;
+    display: flex;
+    justify-content: center;
+    }
+    
+    .card-img-thanks {
+    width: 100%;
+    margin-left: 45px;
+    border: 5px solid white;
+    width: 400px;
+    }
+    
+    .card-title-2 {
+    font-size: 30px;
+    margin-top: 15px;
+    margin-left: -127px;
+    text-align: center;
+    font-family: "Ubuntu Mono", monospace;
+    font-weight: 700;
+    font-style: bold;
+    }
+    
+    .card-text-2 {
+    font-size: 20px;
+    margin-top: -30px;
+    margin-left: -127px;
+    text-align: center;
+    }
+    
+    .card-img-thanks-2 {
+    width: 100%;
+    margin-left: -127px;
+    border: 5px solid white;
+    width: 400px;
+    }
